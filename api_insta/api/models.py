@@ -10,7 +10,7 @@ def upload_avatar_path(instance, filename):
 
 def upload_post_path(instance, filename):
     ext = filename.split('.')[-1]
-    return '/'.join(['posts', str(instance.userProfile.id) + str(instance.title) + str('.')+str(ext)])
+    return '/'.join(['posts', str(instance.userPost.id) + str(instance.title) + str('.')+str(ext)])
 
 
 class UserManager(BaseUserManager):
